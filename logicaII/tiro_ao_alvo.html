@@ -1,0 +1,42 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+
+    raio = 10
+    function desenhaCirculo(x,y,raio,cor){
+        pincel.fillStyle = cor;
+        pincel.beginPath();
+        pincel.arc(x,y,raio,0,2*3.14);
+        pincel.fill();
+    }
+
+    function limpaTela() {
+        pincel.clearRect(0,0,600,400)
+    }
+
+    function mexeAlvo() {
+        limpaTela()
+        var x = Math.round(Math.random()*600);
+        var y = Math.round(Math.random()*400);
+
+        desenhaCirculo(x,y,raio+20,'red');
+        desenhaCirculo(x,y,raio+10,'white');
+        desenhaCirculo(x,y,raio,'red');
+    }
+
+
+    function clica(evento) {
+        console.log(evento.pageX, evento.pageY);
+        // if ((evento.pageX < raio+10 && evento.pageX > x-10) && (evento.pageY < y+10 && evento.pageY > y-10)) {
+        //     alert('Ṕarabéns')
+        // }
+    }
+
+    setInterval(mexeAlvo, 3000)
+    tela.onclick = clica
+
+</script>

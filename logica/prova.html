@@ -1,0 +1,63 @@
+<meta charset="UTF-8">
+<style>
+    * {
+        color: white;
+        background-color: black;
+    }
+</style>
+<script>
+    function pulaLinha() {
+        document.write('<br>');
+    }
+
+    var numero = 2
+
+    document.write("<h2>TABUADA DE "+numero+"</h2>")
+
+    document.write(numero + " vezes 1 é " + numero * 1+ "<br>");
+    document.write(numero + " vezes 2 é " + numero * 2+ "<br>");
+    document.write(numero + " vezes 3 é " + numero * 3+ "<br>");
+    document.write(numero + " vezes 4 é " + numero * 4+ "<br>");
+    document.write(numero + " vezes 5 é " + numero * 5+ "<br>");
+    document.write(numero + " vezes 6 é " + numero * 6+ "<br>");
+    document.write(numero + " vezes 7 é " + numero * 7+ "<br>");
+    document.write(numero + " vezes 8 é " + numero * 8+ "<br>");
+    document.write(numero + " vezes 9 é " + numero * 9+ "<br>");
+    document.write(numero + " vezes 10 é " + numero * 10+ "<br>");
+
+    document.write("<br>")
+
+    var ano = 2016;
+
+    var nomeFlavio = "Flavio"
+    var idadeFlavio = ano - 1977
+    var nomeJoaquim = "Joaquim"
+    var idadeJoaquim = ano - 1996
+    var nomeBarney = "Barney"
+    var idadeBarney = ano - 1976
+
+    document.write("<h2>IDADE E MÉDIA - ANO " + ano +"</h2>")
+
+    document.write(nomeFlavio + " tem " + idadeFlavio + " anos");
+    pulaLinha()
+    document.write(nomeJoaquim + " tem " + idadeJoaquim + " anos");
+    pulaLinha()
+    document.write(nomeBarney + " tem " + idadeBarney + " anos");
+    pulaLinha()
+    
+    var media = (idadeBarney + idadeFlavio + idadeJoaquim)/3
+    
+    document.write('A média das idades é  ' + Math.round(media));
+
+    document.write("<h2>IDADE FILHAS HACKER</h2>")
+    
+    var idadeLinda = 12;
+    var idadeGuaraciara = 15
+    var idadePerola = 13;
+
+    var totalIdades = idadeGuaraciara + idadeLinda + idadeLinda
+
+    var mediaIdades = totalIdades/3;
+
+    document.write("Media = " + Math.round(mediaIdades));
+</script>

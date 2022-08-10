@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write('<br>');
+    };
+
+    function mostra(mensagem) {
+        document.write(mensagem);
+        pulaLinha();
+    }
+
+    var ano = 2022;
+    anoSamuel = 2001;
+    anoRafael = 1998;
+
+    var idadeSamuel = ano - anoSamuel;
+    var idadeRafael = ano - anoRafael;
+    var diferencaIdade = idadeSamuel - idadeRafael;
+
+    mostra("Samuel tem "+ idadeSamuel + " anos")
+    mostra("Rafael tem " + idadeRafael + " anos")
+    mostra("A diferenca de idade é de " + diferencaIdade + " anos");
+
+</script>

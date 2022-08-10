@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write('<br>');
+    }
+
+    function mostra(mensagem) {
+        document.write(mensagem);
+        pulaLinha();
+    }
+
+
+    var numeroSorteado = (Math.random() * 10).toFixed(0)
+
+    var tentativas = 0
+
+    while (tentativas < 3) {
+        
+        mostra('Tentativa n° '+(tentativas+1))
+        var numeroUsuario = parseInt(prompt("Digite um numero: "))        
+        
+        if (numeroUsuario == numeroSorteado) {
+            mostra('Parabéns, você acertou');
+        }
+
+        else {
+            mostra('Você errou')
+        }
+
+        tentativas++;
+
+    }
+    mostra('Número sorteado era '+numeroSorteado)
+
+</script>

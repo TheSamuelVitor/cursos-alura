@@ -1,0 +1,50 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    function bandeiraBrasil() {
+        pincel.fillStyle = '#00ff00';
+        pincel.fillRect(0, 0, 600, 400);
+
+        pincel.fillStyle = '#ff0f';
+        pincel.beginPath();
+        pincel.moveTo(300, 0);
+        pincel.lineTo(0, 200);
+        pincel.lineTo(300, 400);
+        pincel.lineTo(600, 200);
+        pincel.fill();
+
+        pincel.fillStyle = '#0000ff';
+        pincel.beginPath();
+        pincel.arc(300,200,125,0,2*Math.PI);
+        pincel.fill();
+    }
+
+    function bandeiraALemanha() {
+        pincel.fillStyle = '#000000';
+        pincel.fillRect(0, 0, 600, tela.height/3);
+
+        pincel.fillStyle = '#ff0000';
+        pincel.fillRect(0, tela.height/3, 600, tela.height/3);
+
+        pincel.fillStyle = '#ff0f';
+        pincel.fillRect(0, tela.height/1.5, 600, tela.height/3);
+    }
+
+    bandeira = 1
+    function alternaBandeira(params) {
+        if (bandeira == 1) {
+	        bandeiraBrasil()
+            bandeira+= 1
+        } else if (bandeira == 2) {
+            bandeiraALemanha()
+            bandeira = 1
+        }
+	}
+
+    setInterval(alternaBandeira, 3000)
+
+</script>

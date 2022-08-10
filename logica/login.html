@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var loginCadastrado = "Samuel"
+    var senhaCadastrada = "1234"
+
+    var tentativaAtual = 1
+    var tentativaMaxima = 3
+
+    while( tentativaAtual <= tentativaMaxima ) {
+        var login = prompt("Digite seu login")
+        var senha = prompt("Digite sua senha")
+
+        if (login == loginCadastrado && senha == senhaCadastrada) {
+            alert("Dados corretos\nBem vindo ao sistema")
+            tentativaAtual = tentativaMaxima
+        } else {
+            if (tentativaAtual == tentativaMaxima) {
+                alert("Tentativa maxima ultrapassada")
+            }
+            else {
+                alert("Login invalido tente novamente")
+            }
+        }
+        tentativaAtual = tentativaAtual + 1;
+    }
+
+</script>
