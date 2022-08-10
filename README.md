@@ -18,4 +18,8 @@ git commit -m '[mensagem]'
 
 # github para de monitorar o arquivo
 git rm --cached [nome do arquivo]
+
+# visualiza as modificações feitas
+git log
+
 ```
