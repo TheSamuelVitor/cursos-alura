@@ -22,4 +22,15 @@ git rm --cached [nome do arquivo]
 # visualiza as modificações feitas
 git log
 
+# mostra os commits em apenas uma linha
+git log --oneline
+
+# mostra os commits com as modificações dos arquivos
+git log -p
+
+# configura o usuario e o email respectivamente
+git config --local user.name "nome"
+git config --local user.email "email"
+
+
 ```
