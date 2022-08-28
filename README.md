@@ -1,7 +1,3 @@
-```
-
-```
-
 # Curso Git e Github
 Repositório feito usando o Github por linha de comando
 
@@ -68,7 +64,6 @@ git restore --staged [nome_do_arquivo]
 git revert [hash_do_commit]
 
 # Guardando alterações para fazer depois
-<<<<<<< Updated upstream
 
 - Comando para guardar as alterações
 git stash
@@ -78,7 +73,10 @@ git stash list
 
 - retorna para a stash feita anteriormente
 git stash apply [numero_da_stash]
-=======
-git stash
->>>>>>> Stashed changes
+
+- apos o comando anterior a stash continuaria na lista por isso se faz o comando
+git stash drop
+
+- por isso há o comando para fazer ambos os comandos anteriores
+git stash pop
 ```	
