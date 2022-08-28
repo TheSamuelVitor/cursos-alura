@@ -1,9 +1,12 @@
-#Curso Git e Github
+```
+
+```
+
+# Curso Git e Github
 Repositório feito usando o Github por linha de comando
 
 ```
 bash
-
 # inicializa um repositório
 git init
 
@@ -28,9 +31,39 @@ git log --oneline
 # mostra os commits com as modificações dos arquivos
 git log -p
 
+# mostra as ações como linhas seguidas
+git log --graph
+
 # configura o usuario e o email respectivamente
 git config --local user.name "nome"
 git config --local user.email "email"
 
+# Trabalhando com branchs
 
+- Criando uma branch
+git branch [nome_da_branch]
+
+- Navegando entre branchs
+git checkout [nome_da_branch]
+
+- Navegando e criando uma branch
+git checkout -b [nome_Da_branch]
+
+- Fazendo merge de branchs
+git merge [nome_da_branch]
+
+- Caso tenha uma branch master e uma branch teste, este comando escreverá as mudanças da master após os commits da branch teste
+git rebase [nome_da_branch]
+
+# Revertendo as mudanças feitas
+
+- Discarta as mudanças feitas em um arquivo
+git restore [nome_do_arquivo]
+
+- Remove o(s) arquivo(s) do 'stage'(após ter colocado 'git add [nome_do_arquivo]')
+git restore --staged [nome_do_arquivo]
+
+- Reverte as mudanças de um commit
+-- o hash do commit é amostrado ao ser digitado git log
+git revert [hash_do_commit]
 ```
