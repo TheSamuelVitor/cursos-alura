@@ -68,6 +68,7 @@ git restore --staged [nome_do_arquivo]
 git revert [hash_do_commit]
 
 # Guardando alterações para fazer depois
+<<<<<<< Updated upstream
 
 - Comando para guardar as alterações
 git stash
@@ -77,4 +78,7 @@ git stash list
 
 - retorna para a stash feita anteriormente
 git stash apply [numero_da_stash]
+=======
+git stash
+>>>>>>> Stashed changes
 ```	
