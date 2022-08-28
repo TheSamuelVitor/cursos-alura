@@ -53,7 +53,7 @@ git checkout -b [nome_Da_branch]
 git merge [nome_da_branch]
 
 - Caso tenha uma branch master e uma branch teste, este comando escreverá as mudanças da master após os commits da branch teste
-git rebase [nome_da_branch]
+git rebase [nome_da_abranch]
 
 # Revertendo as mudanças feitas
 
@@ -66,4 +66,15 @@ git restore --staged [nome_do_arquivo]
 - Reverte as mudanças de um commit
 -- o hash do commit é amostrado ao ser digitado git log
 git revert [hash_do_commit]
-```
+
+# Guardando alterações para fazer depois
+
+- Comando para guardar as alterações
+git stash
+
+- mostra os stashes feitos
+git stash list
+
+- retorna para a stash feita anteriormente
+git stash apply [numero_da_stash]
+```	
