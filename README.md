@@ -79,4 +79,12 @@ git stash drop
 
 - por isso há o comando para fazer ambos os comandos anteriores
 git stash pop
+
+# Vendo as mudanças feitas
+
+- mostra as mmudanças feitas nos arquivos
+git diff
+
+- mostra as diferenças comparando dois commits
+git diff [numero_do_primeiro_commit]..[numero_do_segundo_commit]
 ```	
