@@ -30,6 +30,9 @@ git log -p
 # mostra as ações como linhas seguidas
 git log --graph
 
+# mostra apenas os dois ultimos commits
+git log -n 2
+
 # configura o usuario e o email respectivamente
 git config --local user.name "nome"
 git config --local user.email "email"
