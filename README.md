@@ -90,4 +90,14 @@ git diff
 
 - mostra as diferenças comparando dois commits
 git diff [numero_do_primeiro_commit]..[numero_do_segundo_commit]
+
+# Marca um commit como flag
+
+- cria uma nova tag
+-- [-a]: o nome da tag
+-- [-m]: mensagem a ser mostrada
+git tag -a v0.1.0 -m "Primeira versao da aplicacao" 
+
+- mostra as tags existentes
+git tag
 ```	
