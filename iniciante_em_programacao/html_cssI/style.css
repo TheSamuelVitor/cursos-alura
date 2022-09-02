@@ -4,7 +4,7 @@ header {
 }
 
 body {
-	background-image: linear-gradient(to bottom, #ffffff, #000000);
+	background: linear-gradient(to bottom, #fefefe, #888);
 }
 
 .caixa {
@@ -94,11 +94,6 @@ footer {
 	margin: 20px 0 0;
 }
 
-main {
-	width: 940px;
-	margin: 0 auto;
-}
-
 form {
 	margin: 40px 0;
 }
@@ -169,6 +164,13 @@ th {
 	clear: left;
 }
 
+
+.principal {
+	padding: 3em 0;
+	width: 940px;
+	margin: 0 auto;
+}
+
 .principal p {
 	margin: 0 0 1em;
 }
@@ -190,15 +192,13 @@ th {
 
 .mapa {
 	padding: 3em 0;
+	width: 940px;
+	margin: 0 auto;
 }
 
 .mapa p {
 	margin: 0 0 2em;
 	text-align: center;
-}
-
-.beneficios {
-
 }
 
 .conteudo-beneficios {
@@ -216,9 +216,14 @@ th {
 	line-height: 1.5;
 }
 
+.itens::before {
+	content: "★ ";
+}
+
 .itens:first-child {
 	font-weight: bold;
 }
+
 /* 
 .itens:nth-child(2) {
 	font-size: 10px;
