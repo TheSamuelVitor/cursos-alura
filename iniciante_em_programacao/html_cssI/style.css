@@ -201,6 +201,10 @@ th {
 	text-align: center;
 }
 
+.beneficios {
+	padding: 3em 0;
+}
+
 .conteudo-beneficios {
 	width: 640px;
 	margin: 0 auto;
@@ -231,6 +235,13 @@ th {
 
 .imagembeneficios {
 	width: 60%;
+	opacity: 1;
+	transition: 400ms;
+	box-shadow: 10px 10px 10px #000000;
+}
+
+.imagembeneficios:hover {
+	opacity: 0.9;
 }
 
 .video {
@@ -256,3 +267,44 @@ img ~ p {
 .principal p:not(#missao) {
 	background-color: orange;
 } */
+
+
+@media screen and (max-width: 480px) {
+
+	header {
+		padding: 30px 20px;
+	}
+	
+	main {
+		margin: 0 1em;
+	}
+
+	p {
+		text-align: justify;
+	}
+
+	.caixa, .principal, .conteudo-beneficios, .mapa, .video {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	nav {
+		position: static;
+	}
+
+	.lista-beneficios {
+		width: 100%;
+	}
+
+	.imagembeneficios {
+		width: 100%;
+	}
+
+	section, header {
+		margin: 2em 0;
+	}
+
+}
