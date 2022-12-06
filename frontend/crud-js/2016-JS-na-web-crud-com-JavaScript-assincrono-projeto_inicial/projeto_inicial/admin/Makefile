@@ -1,4 +1,4 @@
-banco:
+application:
 	json-server --watch db.json
 
 browser:
