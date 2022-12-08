@@ -1,8 +1,7 @@
-import {clienteService} from "../service/cliente-service.js"
+import { clienteService } from "../service/cliente-service.js";
 
-const criaNovaLinha = (nome, email) => {
-
-  const linhaNovaCliente = document.createElement('tr')
+const criaNovaLinha = (nome, email, id) => {
+  const linhaNovaCliente = document.createElement("tr");
 
   const conteudo = `<td class="td" data-td>${nome}</td>
   <td>${email}</td>
@@ -15,17 +14,34 @@ const criaNovaLinha = (nome, email) => {
         <button class="botao-simples botao-simples--excluir" type="button">Excluir</button>
       </li>
     </ul>
-  </td>`
+  </td>`;
 
-  linhaNovaCliente.innerHTML = conteudo
-  return linhaNovaCliente
-}
+  linhaNovaCliente.innerHTML = conteudo;
+  linhaNovaCliente.dataset.id = id;
 
-const tabela = document.querySelector(`[data-tabela]`)
+  return linhaNovaCliente;
+};
 
-clienteService.listaClientes()
-  .then(data => {
-    data.forEach(elemento => {
-      tabela.appendChild(criaNovaLinha(elemento.nome, elemento.email))
-    });
-  })
+const tabela = document.querySelector(`[data-tabela]`);
+
+clienteService.listaClientes().then((data) => {
+  data.forEach((elemento) => {
+    tabela.appendChild(
+      criaNovaLinha(elemento.nome, elemento.email, elemento.id)
+    );
+  });
+});
+
+tabela.addEventListener("click", (evento) => {
+  let ehBotao =
+    evento.target.className == "botao-simples botao-simples--excluir";
+  if (ehBotao) {
+    const linhaCliente = evento.target.closest('[data-id]')
+    let id = linhaCliente.dataset.id
+    clienteService.deletaCliente(id).then(
+      () => {
+        linhaCliente.remove();
+      }
+    )
+  }
+});
