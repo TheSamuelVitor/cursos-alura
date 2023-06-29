@@ -36,8 +36,10 @@ git log -n 2
 # configura o usuario e o email respectivamente
 git config --local user.name "nome"
 git config --local user.email "email"
+```
 
 # Trabalhando com branchs
+```
 
 - Criando uma branch
 git branch [nome_da_branch]
@@ -65,8 +67,10 @@ git restore --staged [nome_do_arquivo]
 - Reverte as mudanças de um commit
 -- o hash do commit é amostrado ao ser digitado git log
 git revert [hash_do_commit]
+```
 
 # Guardando alterações para fazer depois
+```
 
 - Comando para guardar as alterações
 git stash
@@ -82,8 +86,10 @@ git stash drop
 
 - por isso há o comando para fazer ambos os comandos anteriores
 git stash pop
+```
 
 # Vendo as mudanças feitas
+```
 
 - mostra as mmudanças feitas nos arquivos
 git diff
